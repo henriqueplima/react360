@@ -2,7 +2,10 @@
   "name": "Hello360",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://henriqueplima.github.io/react360/",
   "scripts": {
+    "predeploy": "npm run bundle",
+    "deploy": "gh-pages -d build",
     "start": "node node_modules/react-360/scripts/packager.js",
     "bundle": "node node_modules/react-360/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/index.html')\"",
@@ -10,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "16.3.2",
     "react-360": "~1.1.0",
     "react-360-web": "~1.1.0",
